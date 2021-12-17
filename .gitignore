@@ -24,3 +24,6 @@ rustler_precompilation_example-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Ignore the generated "native" dir from Rustler
+/priv/native/
