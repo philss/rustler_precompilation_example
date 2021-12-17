@@ -3,3 +3,6 @@ rustflags = [
     "-C", "link-arg=-undefined",
     "-C", "link-arg=dynamic_lookup",
 ]
+
+[profile.release]
+lto = true
