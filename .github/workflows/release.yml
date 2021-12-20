@@ -13,7 +13,7 @@ defaults:
   run:
     # Sets the working dir for "run" scripts.
     # Note that this won't change the directory for actions (tasks with "uses").
-    working-directory: ${{ env.NIF_DIRECTORY }}
+    working-directory: "./native/example"
 
 jobs:
   build_release:
