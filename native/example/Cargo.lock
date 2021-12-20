@@ -77,7 +77,7 @@ checksum = "f497285884f3fcff424ffc933e56d7cbca511def0c9831a7f9b5f6153e3cc89b"
 [[package]]
 name = "rustler"
 version = "0.22.2"
-source = "git+https://github.com/rusterlium/rustler#f8f0ce0c1a0c96c8cd7a16660fd4b982c4631028"
+source = "git+https://github.com/philss/rustler?branch=ps-support-precompiled-nifs#eb753389d82b43d0508782b2364419eb695a20f9"
 dependencies = [
  "lazy_static",
  "rustler_codegen",
@@ -87,7 +87,7 @@ dependencies = [
 [[package]]
 name = "rustler_codegen"
 version = "0.22.2"
-source = "git+https://github.com/rusterlium/rustler#f8f0ce0c1a0c96c8cd7a16660fd4b982c4631028"
+source = "git+https://github.com/philss/rustler?branch=ps-support-precompiled-nifs#eb753389d82b43d0508782b2364419eb695a20f9"
 dependencies = [
  "heck",
  "proc-macro2",
@@ -98,7 +98,7 @@ dependencies = [
 [[package]]
 name = "rustler_sys"
 version = "2.1.1"
-source = "git+https://github.com/rusterlium/rustler#f8f0ce0c1a0c96c8cd7a16660fd4b982c4631028"
+source = "git+https://github.com/philss/rustler?branch=ps-support-precompiled-nifs#eb753389d82b43d0508782b2364419eb695a20f9"
 dependencies = [
  "regex",
  "unreachable",

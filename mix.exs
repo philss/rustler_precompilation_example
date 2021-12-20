@@ -21,7 +21,7 @@ defmodule RustlerPrecompilationExample.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:rustler, github: "rusterlium/rustler", sparse: "rustler_mix"}
+      {:rustler, github: "philss/rustler", branch: "ps-support-precompiled-nifs", sparse: "rustler_mix"}
     ]
   end
 end

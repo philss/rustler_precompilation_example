@@ -1,5 +1,6 @@
 %{
+  "castore": {:hex, :castore, "0.1.14", "3f6d7c7c1574c402fef29559d3f1a7389ba3524bc6a090a5e9e6abc3af65dcca", [:mix], [], "hexpm", "b34af542eadb727e6c8b37fdf73e18b2e02eb483a4ea0b52fd500bc23f052b7b"},
   "jason": {:hex, :jason, "1.2.2", "ba43e3f2709fd1aa1dce90aaabfd039d000469c05c56f0b8e31978e03fa39052", [:mix], [{:decimal, "~> 1.0 or ~> 2.0", [hex: :decimal, repo: "hexpm", optional: true]}], "hexpm", "18a228f5f0058ee183f29f9eae0805c6e59d61c3b006760668d8d18ff0d12179"},
-  "rustler": {:git, "https://github.com/rusterlium/rustler.git", "f8f0ce0c1a0c96c8cd7a16660fd4b982c4631028", [sparse: "rustler_mix"]},
+  "rustler": {:git, "https://github.com/philss/rustler.git", "eb753389d82b43d0508782b2364419eb695a20f9", [branch: "ps-support-precompiled-nifs", sparse: "rustler_mix"]},
   "toml": {:hex, :toml, "0.5.2", "e471388a8726d1ce51a6b32f864b8228a1eb8edc907a0edf2bb50eab9321b526", [:mix], [], "hexpm", "f1e3dabef71fb510d015fad18c0e05e7c57281001141504c6b69d94e99750a07"},
 }
