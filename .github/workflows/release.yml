@@ -2,6 +2,7 @@ name: Build release
 
 env:
   MIN_SUPPORTED_RUST_VERSION: "1.55.0"
+  NIF_DIRECTORY: "native/example"
 
 on:
   push:
@@ -12,7 +13,7 @@ defaults:
   run:
     # Sets the working dir for "run" scripts.
     # Note that this won't change the directory for actions (tasks with "uses").
-    working-directory: ./native/example
+    working-directory: ${{ env.NIF_DIRECTORY }}
 
 jobs:
   build_release:
@@ -152,7 +153,7 @@ jobs:
         tar -cvzf "${LIB_FINAL_NAME}.tar.gz" "${LIB_FINAL_NAME}"
 
         # Passes the path relative to the root of the project.
-        LIB_FINAL_PATH="native/example/${LIB_FINAL_NAME}.tar.gz"
+        LIB_FINAL_PATH="${NIF_DIRECTORY}/${LIB_FINAL_NAME}.tar.gz"
 
         # Let subsequent steps know where to find the lib
         echo ::set-output name=LIB_FINAL_PATH::${LIB_FINAL_PATH}
