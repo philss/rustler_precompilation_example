@@ -1,10 +1,12 @@
 defmodule RustlerPrecompilationExample.MixProject do
   use Mix.Project
 
+  @version "0.1.1"
+
   def project do
     [
       app: :rustler_precompilation_example,
-      version: "0.1.1",
+      version: @version,
       elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
       deps: deps()
