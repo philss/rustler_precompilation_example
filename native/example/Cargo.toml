@@ -10,4 +10,4 @@ path = "src/lib.rs"
 crate-type = ["cdylib"]
 
 [dependencies]
-rustler = { git = "https://github.com/philss/rustler", branch = "ps-support-precompiled-nifs" }
+rustler = "0.23.0"
