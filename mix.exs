@@ -24,7 +24,7 @@ defmodule RustlerPrecompilationExample.MixProject do
   defp deps do
     [
       {:rustler, "~> 0.23.0"},
-      {:rustler_precompiled, github: "philss/rustler_precompiled", branch: "main"}
+      {:rustler_precompiled, "~> 0.1.0"}
     ]
   end
 end
