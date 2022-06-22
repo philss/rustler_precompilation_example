@@ -16,5 +16,5 @@ rustflags = [
   "-C", "target-feature=-crt-static"
 ]
 
-[profile.release]
-lto = true
+# [profile.release]
+# lto = true
