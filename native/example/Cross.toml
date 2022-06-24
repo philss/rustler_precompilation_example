@@ -1,0 +1,4 @@
+[build.env]
+Passthrough = [
+  "RUSTLER_NIF_VERSION"
+]
