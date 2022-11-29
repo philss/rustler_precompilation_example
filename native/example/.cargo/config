@@ -16,5 +16,11 @@ rustflags = [
   "-C", "target-feature=-crt-static"
 ]
 
+# See https://github.com/rust-lang/rust/issues/59302
+[target.aarch64-unknown-linux-musl]
+rustflags = [
+  "-C", "target-feature=-crt-static"
+]
+
 [profile.release]
 lto = true

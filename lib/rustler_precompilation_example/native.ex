@@ -7,6 +7,8 @@ defmodule RustlerPrecompilationExample.Native do
     base_url:
       "https://github.com/philss/rustler_precompilation_example/releases/download/v#{version}",
     force_build: System.get_env("RUSTLER_PRECOMPILATION_EXAMPLE_BUILD") in ["1", "true"],
+    targets:
+      Enum.uniq(["aarch64-unknown-linux-musl" | RustlerPrecompiled.Config.default_targets()]),
     version: version
 
   # When your NIF is loaded, it will override this function.
