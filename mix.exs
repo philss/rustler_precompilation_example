@@ -8,7 +8,7 @@ defmodule RustlerPrecompilationExample.MixProject do
     [
       app: :rustler_precompilation_example,
       version: @version,
-      elixir: "~> 1.12",
+      elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       description: "A rustler precomplication example",
       package: package(),

@@ -1,7 +1,7 @@
 %{
-  "castore": {:hex, :castore, "0.1.18", "deb5b9ab02400561b6f5708f3e7660fc35ca2d51bfc6a940d2f513f89c2975fc", [:mix], [], "hexpm", "61bbaf6452b782ef80b33cdb45701afbcf0a918a45ebe7e73f1130d661e66a06"},
+  "castore": {:hex, :castore, "0.1.19", "a2c3e46d62b7f3aa2e6f88541c21d7400381e53704394462b9fd4f06f6d42bb6", [:mix], [], "hexpm", "e96e0161a5dc82ef441da24d5fa74aefc40d920f3a6645d15e1f9f3e66bb2109"},
   "jason": {:hex, :jason, "1.4.0", "e855647bc964a44e2f67df589ccf49105ae039d4179db7f6271dfd3843dc27e6", [:mix], [{:decimal, "~> 1.0 or ~> 2.0", [hex: :decimal, repo: "hexpm", optional: true]}], "hexpm", "79a3791085b2a0f743ca04cec0f7be26443738779d09302e01318f97bdb82121"},
   "rustler": {:hex, :rustler, "0.26.0", "06a2773d453ee3e9109efda643cf2ae633dedea709e2455ac42b83637c9249bf", [:mix], [{:jason, "~> 1.0", [hex: :jason, repo: "hexpm", optional: false]}, {:toml, "~> 0.6", [hex: :toml, repo: "hexpm", optional: false]}], "hexpm", "42961e9d2083d004d5a53e111ad1f0c347efd9a05cb2eb2ffa1d037cdc74db91"},
-  "rustler_precompiled": {:hex, :rustler_precompiled, "0.5.3", "e90fcbfa905104331b63210b99cd2646eb54f6687553eb2a842bd8c9d8f4daee", [:mix], [{:castore, "~> 0.1", [hex: :castore, repo: "hexpm", optional: false]}, {:rustler, "~> 0.23", [hex: :rustler, repo: "hexpm", optional: true]}], "hexpm", "6f07bb4d1bd437d62b72329ce2489fe250da694f6adab9935f8cafd46715b30d"},
-  "toml": {:hex, :toml, "0.6.2", "38f445df384a17e5d382befe30e3489112a48d3ba4c459e543f748c2f25dd4d1", [:mix], [], "hexpm", "d013e45126d74c0c26a38d31f5e8e9b83ea19fc752470feb9a86071ca5a672fa"},
+  "rustler_precompiled": {:hex, :rustler_precompiled, "0.5.4", "34f79a8bdeeb094590b6d88a03469c90d2192c45ac10afcae2acf4f1b925b2dc", [:mix], [{:castore, "~> 0.1", [hex: :castore, repo: "hexpm", optional: false]}, {:rustler, "~> 0.23", [hex: :rustler, repo: "hexpm", optional: true]}], "hexpm", "c5a078315c5f450281f75c0953b14535fbaaad737b85a97a2b72983f45cc30d2"},
+  "toml": {:hex, :toml, "0.7.0", "fbcd773caa937d0c7a02c301a1feea25612720ac3fa1ccb8bfd9d30d822911de", [:mix], [], "hexpm", "0690246a2478c1defd100b0c9b89b4ea280a22be9a7b313a8a058a2408a2fa70"},
 }
