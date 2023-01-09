@@ -61,8 +61,6 @@ jobs:
       with:
         toolchain: stable
         target: ${{ matrix.job.target }}
-        override: true
-        profile: minimal
 
     - name: Show version information (Rust, cargo, GCC)
       shell: bash
@@ -141,11 +139,11 @@ jobs:
         LIB_FINAL_PATH="${NIF_DIRECTORY}/${LIB_FINAL_NAME}.tar.gz"
 
         # Let subsequent steps know where to find the lib
-        echo ::set-output name=LIB_FINAL_PATH::${LIB_FINAL_PATH}
-        echo ::set-output name=LIB_FINAL_NAME::${LIB_FINAL_NAME}.tar.gz
+        echo "LIB_FINAL_PATH=${LIB_FINAL_PATH}" >> $GITHUB_OUTPUT
+        echo "LIB_FINAL_NAME=${LIB_FINAL_NAME}.tar.gz" >> $GITHUB_OUTPUT
 
     - name: "Artifact upload"
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: ${{ steps.rename.outputs.LIB_FINAL_NAME }}
         path: ${{ steps.rename.outputs.LIB_FINAL_PATH }}
