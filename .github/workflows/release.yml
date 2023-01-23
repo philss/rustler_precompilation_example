@@ -1,20 +1,11 @@
 name: Build precompiled NIFs
 
-env:
-  NIF_DIRECTORY: "native/example"
-
 on:
   push:
     branches:
       - main
     tags:
       - '*'
-
-defaults:
-  run:
-    # Sets the working dir for "run" scripts.
-    # Note that this won't change the directory for actions (tasks with "uses").
-    working-directory: "./native/example"
 
 jobs:
   build_release:
@@ -35,8 +26,6 @@ jobs:
           - { target: x86_64-pc-windows-gnu       , os: windows-2019  }
           - { target: x86_64-pc-windows-msvc      , os: windows-2019  }
 
-    env:
-      RUSTLER_NIF_VERSION: ${{ matrix.nif }}
     steps:
     - name: Checkout source code
       uses: actions/checkout@v3
@@ -44,9 +33,9 @@ jobs:
     - name: Extract crate information
       shell: bash
       run: |
-        echo "PROJECT_NAME=$(sed -n 's/^name = "\(.*\)"/\1/p' Cargo.toml | head -n1)" >> $GITHUB_ENV
+        echo "PROJECT_NAME=example" >> $GITHUB_ENV
         # Get the project version from mix.exs
-        echo "PROJECT_VERSION=$(sed -n 's/^  @version "\(.*\)"/\1/p' ../../mix.exs | head -n1)" >> $GITHUB_ENV
+        echo "PROJECT_VERSION=$(sed -n 's/^  @version "\(.*\)"/\1/p' mix.exs | head -n1)" >> $GITHUB_ENV
 
     - name: Install Rust toolchain
       uses: dtolnay/rust-toolchain@stable
@@ -74,7 +63,7 @@ jobs:
         target: ${{ matrix.job.target }}
         nif-version: ${{ matrix.nif }}
         use-cross: ${{ matrix.job.use-cross }}
-        manifest-file: "native/example/Cargo.toml"
+        project-dir: "native/example"
 
     - name: "Artifact upload"
       uses: actions/upload-artifact@v3
