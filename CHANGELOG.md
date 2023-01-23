@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] - 2023-01-23
+
+- Nothing changed. Only the "release" workflow that is now using the following GitHub Action:
+  https://github.com/philss/rustler-precompiled-action 
+
 ## [0.4.0] - 2022-04-28
 
 ### Changed
