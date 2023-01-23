@@ -16,4 +16,6 @@ After that, enter the console with `iex -S mix` and test the `add/2` function:
 RustlerPrecompilationExample.Native.add(2, 2)
 ```
 
+The GitHub Action responsible for building the NIFs can be found at [.github/workflows/release.yml](https://github.com/philss/rustler_precompilation_example/blob/main/.github/workflows/release.yml).
+
 For further details check the [RustlerPrecompiled project](https://github.com/philss/rustler_precompiled).

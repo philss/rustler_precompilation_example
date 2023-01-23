@@ -42,17 +42,6 @@ jobs:
         toolchain: stable
         target: ${{ matrix.job.target }}
 
-    - name: Show version information (Rust, cargo, GCC)
-      shell: bash
-      run: |
-        gcc --version || true
-        rustup -V
-        rustup toolchain list
-        rustup default
-        cargo -V
-        rustc -V
-        rustc --print=cfg
-
     - name: Build the project
       id: build-crate
       uses: philss/rustler-precompiled-action@main
