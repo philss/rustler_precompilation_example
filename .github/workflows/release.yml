@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - ps-testing-precomp-action-v1.0.1-pre
     tags:
       - '*'
 
