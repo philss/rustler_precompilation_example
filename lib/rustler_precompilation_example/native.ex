@@ -1,6 +1,12 @@
 defmodule RustlerPrecompilationExample.Native do
   version = Mix.Project.config()[:version]
-  wrong_math = System.get_env("RUSTLER_PRECOMP_WRONG_MATH") in ["1", "true"]
+
+  wrong_math =
+    Application.compile_env(
+      :rustler_precompilation_example,
+      :build_with_wrong_math,
+      System.get_env("RUSTLER_PRECOMP_WRONG_MATH") in ["1", "true"]
+    )
 
   use RustlerPrecompiled,
     otp_app: :rustler_precompilation_example,

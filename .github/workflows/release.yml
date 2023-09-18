@@ -66,6 +66,7 @@ jobs:
         use-cross: ${{ matrix.job.use-cross }}
         project-dir: "native/example"
         variant: ${{ matrix.job.variant }}
+        features: ${{ matrix.job.features }}
 
     - name: Artifact upload
       uses: actions/upload-artifact@v3
