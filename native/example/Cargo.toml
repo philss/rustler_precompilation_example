@@ -2,7 +2,7 @@
 name = "example"
 version = "0.1.0"
 authors = []
-edition = "2018"
+edition = "2024"
 
 [lib]
 name = "example"
@@ -10,4 +10,4 @@ path = "src/lib.rs"
 crate-type = ["cdylib"]
 
 [dependencies]
-rustler = "0.27.0"
+rustler = "0.37.3"
