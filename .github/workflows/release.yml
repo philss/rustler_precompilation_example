@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - ps-prepare-for-rustler-v0.9
     tags:
       - '*'
 
@@ -11,6 +12,13 @@ jobs:
   build_release:
     name: NIF ${{ matrix.nif }} - ${{ matrix.job.target }} (${{ matrix.job.os }})
     runs-on: ${{ matrix.job.os }}
+    permissions:
+      # For creating a new release.
+      contents: write
+      # The following are needed for the "actions/attest" GH Action.
+      id-token: write
+      attestations: write
+      artifact-metadata: write
     strategy:
       fail-fast: false
       matrix:
@@ -53,6 +61,10 @@ jobs:
         nif-version: ${{ matrix.nif }}
         use-cross: ${{ matrix.job.use-cross }}
         project-dir: "native/example"
+
+    - uses: actions/attest@v4
+      with:
+        subject-path: ${{ steps.build-crate.outputs.file-path }}
 
     - name: Artifact upload
       uses: actions/upload-artifact@v7
