@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - ps-prepare-for-rustler-v0.9
     tags:
       - '*'
 
